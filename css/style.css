@@ -101,7 +101,8 @@ a:hover {
 
 .categories .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -111,11 +112,19 @@ a:hover {
     padding: 20px;
     border: 1px solid black;
     background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     transition: transform 0.3s;
+}
+
+.box-3 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.box-3 h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: black;
 }
 
 .box-3:hover {
@@ -124,22 +133,64 @@ a:hover {
 
 .food-menu {
     padding: 4% 0;
+    background-color: #f9f9f9;
 }
 
 .food-menu .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 .food-item {
-    width: 45%;
-    margin: 2%;
+    width: 30%;
+    margin: 1%;
     padding: 20px;
     border: 1px solid black;
     background-color: #fff;
     text-align: center;
     transition: transform 0.3s;
+}
+
+.food-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.food-item h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.food-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.food-item .price {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.food-item button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.food-item button:hover {
+    background-color: #ff0000;
 }
 
 .food-item:hover {
