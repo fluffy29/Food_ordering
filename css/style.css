@@ -230,3 +230,19 @@ a:hover {
 .footer a:hover {
     color: #ff0000;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .box-3,
+    .food-item {
+        width: 45%;
+    }
+}
