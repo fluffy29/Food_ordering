@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +22,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Food</a></li>
+                    <li><a href="cart.php">Food</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
@@ -61,21 +65,33 @@
                 <h3>Burger Menu</h3>
                 <p>Delicious burger with fresh ingredients.</p>
                 <p class="price">$10.00</p>
-                <button class="btn btn-primary">Add to Cart</button>
+                <form action="add_to_cart.php" method="post">
+                    <input type="hidden" name="item_name" value="Burger Menu">
+                    <input type="hidden" name="item_price" value="10.00">
+                    <input type="submit" value="Add to Cart" class="btn btn-primary">
+                </form>
             </div>
             <div class="food-item">
                 <img src="images/pizza_menu.jpg" alt="Pizza Menu" class="img-responsive img-curve">
                 <h3>Pizza Menu</h3>
                 <p>Authentic Italian pizza with a variety of toppings.</p>
                 <p class="price">$12.00</p>
-                <button class="btn btn-primary">Add to Cart</button>
+                <form action="add_to_cart.php" method="post">
+                    <input type="hidden" name="item_name" value="Pizza Menu">
+                    <input type="hidden" name="item_price" value="12.00">
+                    <input type="submit" value="Add to Cart" class="btn btn-primary">
+                </form>
             </div>
             <div class="food-item">
                 <img src="images/spaggatti_menu.jpg" alt="Spaghetti Menu" class="img-responsive img-curve">
                 <h3>Spaghetti Menu</h3>
                 <p>Classic spaghetti with a rich tomato sauce.</p>
                 <p class="price">$8.00</p>
-                <button class="btn btn-primary">Add to Cart</button>
+                <form action="add_to_cart.php" method="post">
+                    <input type="hidden" name="item_name" value="Spaghetti Menu">
+                    <input type="hidden" name="item_price" value="8.00">
+                    <input type="submit" value="Add to Cart" class="btn btn-primary">
+                </form>
             </div>
         </div>
     </section>
