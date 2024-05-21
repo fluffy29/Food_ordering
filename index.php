@@ -1,15 +1,22 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Website</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <section class="navbar">
         <div class="container">
@@ -17,13 +24,14 @@ session_start();
                 <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
             </div>
             <div class="menu text-right">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="cart.php">Food</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="cart.php">Food</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="logout.php">Logout</a></li>
+    </ul>
+</div>
             <div class="clearfix"></div>
         </div>
     </section>
@@ -110,4 +118,7 @@ session_start();
         </div>
     </section>
 </body>
+
+
+
 </html>
